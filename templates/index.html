@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <meta charset="utf-8">
+  <style>
+    canvas {
+      background-color: #f0fff6;
+      cursor: pointer;
+      margin-right: 2vw;}
+    body {
+      background-color: #f0fff6}
+    button {
+      border: none;
+
+      padding: 2vh 5vw;
+  
+      background-color: #387156;
+
+      color: #ffffff;
+      font-size: 22px;
+      font-family: Comfortaa;
+  
+      border-radius: 8px;
+      transition: background-color 0.3s ease, transform 0.1s ease;
+      cursor: pointer;
+      display: block;
+      margin: 0 0;}
+    h2 {
+      font-family: Comfortaa;
+    }
+    p {
+      font-family: Comfortaa;
+    }
+  </style>
+  <canvas id="myCanvas" width="601" height="601"></canvas>
+  <canvas id="enemyCanvas" width="601" height="601"></canvas>
+  <h2 id="yourShips">Ваши корабли:</h2>
+  <p id="katera">Катера: 0 (макс. 4)</p>
+  <p id="esmintsi">Эсминцы: 0 (макс. 3)</p>
+  <p id="kreysera">Крейсеры: 0 (макс. 2)</p>
+  <p id="linkori">Линкоры: 0 (макс. 1)</p>
+  
+  <button id="play">Готово</button>
+  
+  <script src="/static/script.js" defer></script>
+</body>
+</html>
