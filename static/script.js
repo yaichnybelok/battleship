@@ -13,8 +13,6 @@ let pollTimer = null
 let polling = false
 
 
-const url_get = 'http://localhost:8222/getdata'
-const url_post = 'http://localhost:8222/postdata'
 const correctShipAmount = [ 4, 3, 2, 1 ]
 let shipAmountconst = [ 0, 0, 0, 0 ]
 //====================================отрисовка поля==================================================
@@ -57,15 +55,6 @@ function drawField(grid, canvas) {
 }
 
 //====================================логин==================================================
-
-async function getData() {
-  try {
-    const response = await fetch("/getdata")
-    return await response.json()
-  } catch (error) {
-    console.error("Ошибка:", error)
-  }
-}
 
 async function join(grid) {
   try {
