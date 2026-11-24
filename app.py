@@ -89,6 +89,11 @@ def startGame():
     game["winner"] = None
     game["turn"] = secrets.choice([0, 1])
 
+def restartGame():
+    game["status"] = "waiting"
+    game["winner"] = None
+    players.clear()
+
 def shipCells(fleet, row, col):
     cells = [(row, col)]
 
@@ -134,6 +139,8 @@ def applyShot(token, row, col):
                if target["fleet"][r][c] == 1):
             game["status"] = "over"
             game["winner"] = player["slot"]
+            timer = threading.Timer(10, restartGame)
+            timer.start()
     else:
         player["enemy"][row][col] = 4
         target["own"][row][col] = 4
