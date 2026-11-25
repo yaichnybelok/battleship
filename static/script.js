@@ -112,7 +112,7 @@ async function poll() {
     applyState(d)
 
     if (d.status === "over") {
-      stopPoll()
+      //stopPoll()
     } else {
       schedulePoll(1000)
     }
